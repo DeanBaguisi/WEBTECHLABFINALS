@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Homeseek</title>
+  <title>Homeseek - Notification</title>
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Our Custom CSS -->
@@ -60,50 +60,59 @@
           </div>
         </div>
       </nav>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-xl-12 col-md-12">
-            <a href="#">
-              <i class="glyphicon glyphicon-circle-arrow-left"></i> Back </a>
-          </div>
-        </div>
-      </div>
       <div class="py-5 bg-light mr-auto w-25">
         <div class="container">
           <div class="row">
             <h1 class="text-center">Notification</h1>
-            <div class="col-md-4 p-4">
-              <img class="img-fluid d-block rounded-circle mx-auto" src="https://pingendo.github.io/templates/sections/assets/test_meow.jpg">
+            <div class="col-md-3 p-4">
+              <img class="img-fluid d-block rounded-circle mx-auto" src="https://pingendo.github.io/templates/sections/assets/test_meow.jpg"> </div>
+            <div class="col-md-3 p-4">
+              <p>Name : Transient 1</p>
+              <p>Address : Mapukpukaw Street, Baguio City</p>
+              <p>Price : 1,800</p>
+              <p>Reservation Date : May 12 - 15,2018</p>
             </div>
-            <div class="col-md-4 p-4">
-                <p>Name : Transient 1</p>
-                <p>Address : Mapukpukaw Street, Baguio City</p>
-                <p>Price : 1,800</p>
-                <p>Reservation Date : May 12 - 15,2018</p>
-                <p>Status : <b>Pending</b> </p>
-        </div>
-        <div class="col-md-4 p-4">
-                <a class="btn btn-lg btn-primary" disabled href="#">Proceed to Payment</a><br>
-              <a class="btn btn-lg btn-primary" href="#">Cancel Request</a>
-        </div>
-        </div>
-        <div class="row">
-            <h1 class="text-center"></h1>
-            <div class="col-md-4 p-4">
-              <img class="img-fluid d-block rounded-circle mx-auto" src="https://pingendo.github.io/templates/sections/assets/test_meow.jpg">
+            <div class="col-md-3 p-4">
+              <p>Status :
+                <b> Pending</b>
+              </p>
             </div>
-            <div class="col-md-4 p-4">
-                <p>Name : Transient 2</p>
-                <p>Address : Youre Road, Baguio City</p>
-                <p>Price : 1,500</p>
-                <p>Reservation Date : May 10 - 11,2018 </p>
-                <p>Status : <b> Approved</b></p>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-md-10">
+                  <a class="btn btn-lg btn-primary" disabled="" href="#">Proceed to Payment</a>
+                </div><br>
+                <div class="col-md-10">
+                  <a class="btn btn-lg btn-primary" href="#">Cancel Request</a>
+                </div>
+              </div>
+            </div>
           </div>
-        <div class="col-md-4 p-4">
-              <a class="btn btn-lg btn-primary"  href="#">Proceed to Payment</a><br>
-              <a class="btn btn-lg btn-primary" href="#">Cancel Request</a>
-        </div>
-        </div>
+          <div class="row">
+            <h1 class="text-center"></h1>
+            <div class="col-md-3 p-4">
+              <img class="img-fluid d-block rounded-circle mx-auto" src="https://pingendo.github.io/templates/sections/assets/test_meow.jpg"> </div>
+            <div class="col-md-3 p-4">
+              <p>Name : Transient 2</p>
+              <p>Address : Youre Road, Baguio City</p>
+              <p>Price : 1,500</p>
+              <p>Reservation Date : May 10 - 11,2018 </p>
+            </div>
+            <div class="col-md-3 p-4">
+              <p>Status :
+                <b> Approved</b>
+              </p>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-md-10">
+                  <a class="btn btn-lg btn-primary" disabled="" href="#">Proceed to Payment</a>
+                </div><br>
+                <div class="col-md-10">
+                  <a class="btn btn-lg btn-primary" href="#">Cancel Request</a>
+                </div>
+              </div>
+            </div>
         </div>
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -117,8 +126,62 @@
                    });
         </script>
       </div>
+      <div class="bg-light text-white" id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="p-4 col-md-3">
+              <h2 class="mb-4 text-secondary">ABOUT HOMESEEK</h2>
+              <p class="text-white">A website for renting any house and transients and can view and reserve where you want to stay or live.</p>
+            </div>
+            <div class="p-4 col-md-3">
+              <h2 class="mb-4 text-secondary">MAPSITE</h2>
+              <ul class="list-unstyled">
+                <a href="#" class="text-white">Home</a>
+                <br>
+                <a href="transaction.html" class="text-white">Transaction</a>
+                <br>
+                <a href="notification.html" class="text-white">Notification</a>
+                <br>
+                <a href="customer.html" class="text-white">Customer</a>
+              </ul>
+            </div>
+            <div class="p-4 col-md-3">
+              <h2 class="mb-4">CONTACT</h2>
+              <p>
+                <a href="tel:+246 - 542 550 5462" class="text-white">
+                  <i class="fa d-inline mr-3 text-secondary fa-phone"></i>+246 - 542 550 5462</a>
+              </p>
+              <p>
+                <a href="mailto:info@pingendo.com" class="text-white">
+                  <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>info@pingendo.com</a>
+              </p>
+              <p>
+                <a href="https://goo.gl/maps/AUq7b9W7yYJ2" class="text-white" target="_blank">
+                  <i class="fa d-inline mr-3 fa-map-marker text-secondary"></i>365 Park Street, NY</a>
+              </p>
+            </div>
+            <div class="p-4 col-md-3">
+              <h2 class="mb-4 text-light">SUBSCRIBE</h2>
+              <form>
+                <fieldset class="form-group text-white">
+                  <label for="exampleInputEmail1">Get our newsletter</label>
+                  <input type="email" class="form-control" placeholder="Enter email"> </fieldset>
+                <button type="submit" class="btn btn-outline-secondary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 mt-3">
+              <p class="text-center text-white">© Copyright 2018 Group 3 WebtechLab - All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:250px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;
+    <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
+  </pingendo>
 </body>
 
 </html>
