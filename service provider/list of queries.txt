@@ -1,0 +1,57 @@
+Post Services
+use transient;
+
+
+
+INSERT INTO house (house_id, user_id, house_name, house_style, house_capacity, house_description, house_address, rental_type, current_rental_fee, current_reservation_fee, house_status)
+
+VALUES ('', '', '', '' , '' , '' , '' , '', '' , '' , '');
+
+
+Show Reservations
+use transient;
+
+//All
+SELECT * from reservation;
+
+//pending
+SELECT * from reservation
+WHERE reservation_status='pending';
+
+//accepted
+SELECT * from reservation
+WHERE reservation_status='accepted';
+
+//cancelled
+SELECT * from reservation
+WHERE reservation_status='cancelled';
+
+//rejected
+SELECT * from reservation
+WHERE reservation_status='rejected';
+
+Allow/Deny Reservations
+
+UPDATE reservation
+
+SET reservation_status ='accepted' 
+
+WHERE reservation_status = 'pending';
+
+
+Transaction Monitoring
+
+use transient;
+
+
+SELECT * from payments;
+
+
+SELECT * from payments 
+WHERE user_id = ;
+
+
+
+
+
+
