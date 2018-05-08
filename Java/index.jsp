@@ -78,12 +78,9 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li>
-                   
-                        <p> <input type="text" name="name" id="name">
-                            <button type="submit" onclick="OpenPage()">Search<i class="glyphicon glyphicon-search"></i></button>
-                        </p>                       
-                    
-                
+                <input type="text" name="name" id="name" placeholder="Search...">
+                    <button type="submit" onclick="OpenPage()"><i class="glyphicon glyphicon-search"></i>
+                    </button>                     
               </li>
             </ul>
           </div>

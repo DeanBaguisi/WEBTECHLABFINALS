@@ -54,8 +54,9 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-search"></i> Search </a>
+                <input type="text" name="name" id="name" placeholder="Search...">
+                    <button type="submit" onclick="OpenPage()"><i class="glyphicon glyphicon-search"></i>
+                    </button>                     
               </li>
             </ul>
           </div>
@@ -100,10 +101,10 @@
             <small class="form-text text-muted"></small>
           </div>
           <div class="form-group">
-            <label>Start:</label>
+            <label>Check-in:</label>
             <input type="date" class="form-control" required="required"> </div>
           <div class="form-group">
-            <label>End:</label>
+            <label>Check-out:</label>
             <input type="date" class="form-control"> </div>
           <div class="form-group">
             <label>Number of Tenants: </label>
@@ -146,9 +147,6 @@
       }
     </script>
   </div>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:250px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;
-    <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
-  </pingendo>
 </body>
 
 </html>

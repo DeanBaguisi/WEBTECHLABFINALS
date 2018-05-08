@@ -26,10 +26,10 @@
         </li>
         <li>
           <a href="transaction.html">
-            <i class="glyphicon glyphicon-transfer"></i> Transaction </a>  
+            <i class="glyphicon glyphicon-transfer"></i> Transaction </a>
         </li>
         <li>
-        <a href="notification.html">
+          <a href="notification.html">
             <i class="glyphicon glyphicon-globe"></i> Notification </a>
         </li>
         <li>
@@ -54,8 +54,9 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-search"></i> Search </a>
+                <input type="text" name="name" id="name" placeholder="Search...">
+                    <button type="submit" onclick="OpenPage()"><i class="glyphicon glyphicon-search"></i>
+                    </button>                     
               </li>
             </ul>
           </div>
@@ -65,26 +66,23 @@
         <div class="container">
           <div class="row">
             <h1 class="text-center text-uppercase text-primary">Customer Profile</h1>
-            <div class="col-md-4 p-4">
+            <div class="col-md-3 p-4">
               <img class="img-fluid d-block rounded-circle mx-auto" src="https://pingendo.github.io/templates/sections/assets/test_meow.jpg">
+              <br>
+              <br> </div>
+            <div class="col-md-6">
               <p>
-                <b>Room #</b>
-                <br>Senior developer</p>
-              <p class="my-4">
-                <i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</i>
-              </p>
+                <b>Name: </b>
+                <br>
+                <b>Email Address: </b>
+                <br>
+                <b>Status: </b>
+                <br> </p>
+              <a class="btn btn-primary" href="#"> Edit Profile </a>
             </div>
           </div>
         </div>
-        <div class="py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <a class="btn btn-primary" href="#"> Next </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="container"> </div>
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <!-- Bootstrap Js CDN -->
