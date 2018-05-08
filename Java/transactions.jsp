@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Homeseek</title>
+  <title>Homeseek - Transaction</title>
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Our Custom CSS -->
@@ -40,8 +40,14 @@
         <li>
           <a href="transactions.jsp">
             <i class="glyphicon glyphicon-transfer"></i> Transaction </a>
+        </li>
+        <li>
           <a href="notification.html">
             <i class="glyphicon glyphicon-globe"></i> Notification </a>
+        </li>
+        <li>
+          <a href="customer.jsp">
+            <i class="glyphicon glyphicon-user"></i> Customer Profile </a>
         </li>
         <li>
           <a href="index.html">
@@ -54,9 +60,8 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-              <i class="glyphicon glyphicon-align-left"></i>
-              <span>Toggle Sidebar</span>
+            <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+              <i class="glyphicon glyphicon-menu-hamburger"></i>
             </button>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -72,39 +77,44 @@
       <div class="py-5 bg-light mr-auto w-25">
         <div class="container">
           <div class="row">
-            <h1 class="text-center">Transaction</h1>
+            <h1 class="text-center text-uppercase text-primary">Transaction</h1>
+          </div>
+        </div>
+      <div class="py-5 bg-light mr-auto w-25">
+        <div class="container">
+          <div class="row">
+            <h1 class="text-center text-uppercase text-primary">Transaction</h1>
           </div>
         </div>
         <div class="container">
           <div class="row">
-              
-                <div class="col-lg-12">
-                    <table>
-                    <thead>
-                        <tr>
-                            <th>House Name</th>
-                            <th>Date</th>
-                            <th>Remarks</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <c:forEach var="row" items="${result.rows}">
-                            <tr>
-                                <td>${row.prodid}</td>
-                                <td>${row.description}</td>
-                                <td>${row.price}</td>
-                                <td><img src='${row.price}'></td>
-                                <td><img src='${row.price}'></td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
-                </div>                    
-            
-            
-            
+            <div class="col-md-12">
+              <c:foreach var="row" items="${result.rows}"> </c:foreach>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>House Name</th>
+                    <th>Date</th>
+                    <th>Remarks</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>${row.prodid}</td>
+                    <td>${row.description}</td>
+                    <td>${row.price}</td>
+                    <td>
+                      <img src="${row.price}">
+                    </td>
+                    <td>
+                      <img src="${row.price}">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         <!-- jQuery CDN -->

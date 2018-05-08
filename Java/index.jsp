@@ -51,14 +51,15 @@
           <a href="transactions.jsp">
             <i class="glyphicon glyphicon-transfer"></i> Transaction </a>
         </li>
-        <li>
-            <a href="customer.jsp">
-            <i class="glyphicon glyphicon-user"></i> Customer Profile </a>    
-        </li>
         <li> 
           <a href=notification.html>
             <i class="glyphicon glyphicon-globe"></i> Notification </a>
         </li>
+        <li>
+            <a href="customer.jsp">
+            <i class="glyphicon glyphicon-user"></i> Customer Profile </a>    
+        </li>
+
         <li>
           <a href="index.html">
             <i class="glyphicon glyphicon-log-out"></i> Logout </a>
@@ -70,9 +71,8 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-              <i class="glyphicon glyphicon-align-left"></i>
-              <span>Toggle Sidebar</span>
+            <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+              <i class="glyphicon glyphicon-menu-hamburger"></i>
             </button>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -107,7 +107,7 @@
       <div class="py-5 bg-light mr-auto w-25" id="out">
         <div class="container" >
           <div class="row">
-            <h1 class="text-center">Available Units</h1>
+            <h1 class="text-center text-uppercase text-primary">Available Units</h1>
             <c:forEach var="rows" items="${result.rows}">
                 <div class="col-md-4 p-4">
                     <img class="img-fluid d-block rounded-circle mx-auto" src="${rows.image_path}" width="300" height="200">
