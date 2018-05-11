@@ -20,21 +20,25 @@
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="css/style.css"> </head>
+  <link rel="stylesheet" href="css/style.css"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+     <script src="script/customer.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
 
 <body>
-    <!--SELECT house_name, house_style, house_capacity, house_address, image_path
-                FROM house natural join images
-                ORDER BY house_name;-->
+    
      <sql:setDataSource driver="com.mysql.jdbc.Driver"
             user="root" password=""
-            url="jdbc:mysql://localhost:3306/products"/>
+            url="jdbc:mysql://localhost:3306/transient"/>
 
              <sql:query var="result">
                 
-                Select * from products;
+                Select * from house;
              </sql:query>
 
+             
+                 
   <div class="wrapper">
     <!-- Sidebar Holder -->
     <nav id="sidebar">
@@ -51,15 +55,14 @@
           <a href="transactions.jsp">
             <i class="glyphicon glyphicon-transfer"></i> Transaction </a>
         </li>
-        <li> 
-          <a href=notification.html>
-            <i class="glyphicon glyphicon-globe"></i> Notification </a>
-        </li>
         <li>
             <a href="customer.jsp">
             <i class="glyphicon glyphicon-user"></i> Customer Profile </a>    
         </li>
-
+        <li> 
+          <a href=notification.html>
+            <i class="glyphicon glyphicon-globe"></i> Notification </a>
+        </li>
         <li>
           <a href="index.html">
             <i class="glyphicon glyphicon-log-out"></i> Logout </a>
@@ -71,23 +74,21 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
-              <i class="glyphicon glyphicon-menu-hamburger"></i>
+            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+              <i class="glyphicon glyphicon-align-left"></i>
+              <span>Toggle Sidebar</span>
             </button>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-              <li>
-                <input type="text" name="name" id="name" placeholder="Search...">
-                    <button type="submit" onclick="OpenPage()"><i class="glyphicon glyphicon-search"></i>
-                    </button>                     
-              </li>
-            </ul>
-          </div>
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-            <script type="text/javascript">
+                <li>
+                   
+                        <p> <input type="text" name="name" id="name">
+                            <button type="submit" onclick="OpenPage()">Search<i class="glyphicon glyphicon-search"></i></button>
+                        </p>                       
                     
-                    
+               
+                <script type="text/javascript">
                     function OpenPage()
                     {
                             var add = document.getElementById('name').value;
@@ -98,19 +99,80 @@
                             });
                     }
                     
-            </script>
+                </script>
+              </li>
+            </ul>
+          </div>
+            
         </div>
       </nav>
+         <div class="row">
+                <div class="col-lg-2 col-sm-12">
+                    Filter by:
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <button class="btn btn-lg btn-secondary" onClick="byPrice()"> Cheapest </button>
+                    <script type="text/javascript">
+                        
+                    function byPrice()
+                    {
+                            
+                            var url = 'filterPriceCheap.jsp';
+                            $.get(url, function(response)
+                            {
+                                    $('#out').html(response);
+                            });
+                    }
+               
+                    </script>
+      
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <button class="btn btn-lg btn-secondary" onClick="byPriceExpe()"> Expensive </button>
+                    <script type="text/javascript">
+                        
+                    function byPriceExpe()
+                    {
+                            
+                            var url = 'filterPriceExpe.jsp';
+                            $.get(url, function(response)
+                            {
+                                    $('#out').html(response);
+                            });
+                    }
+               
+                    </script>
+      
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <button class="btn btn-lg btn-secondary" onclick="byAvailability"> Available </button>
+                    <script type="text/javascript">
+                        
+                    function byAvailability()
+                    {
+                            
+                            var url = 'filterAvailable.jsp';
+                            $.get(url, function(response)
+                            {
+                                    $('#out').html(response);
+                            });
+                    }
+               
+                    </script>
+                    
+                </div>
+            </div>
       <div class="py-5 bg-light mr-auto w-25" id="out">
         <div class="container" >
+           
           <div class="row">
-            <h1 class="text-center text-uppercase text-primary">Available Units</h1>
+            <h1 class="text-center">Available Units</h1>
             <c:forEach var="rows" items="${result.rows}">
-                <div class="col-md-4 p-4">
-                    <img class="img-fluid d-block rounded-circle mx-auto" src="${rows.image_path}" width="300" height="200">
+                <div class="col-md-4 p-4 m-2">
+                    <img class="img-fluid d-block rounded-circle mx-auto" src="${rows.image_path}" width="300" height="200"/>
                     <p class="my-4">
-                      <i>${rows.prodid}<br>
-                          ${rows.category}</i>
+                      <i>${rows.house_name}<br>
+                         Rental Fee: PHP ${rows.current_rental_fee}</i>
                     </p>
                     <p>
                       <b>${rows.house_address}</b>

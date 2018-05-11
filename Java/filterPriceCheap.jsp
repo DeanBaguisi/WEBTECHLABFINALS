@@ -26,17 +26,15 @@
             user="root" password=""
             url="jdbc:mysql://localhost:3306/transient"/>
  
-            <sql:query var="result">
-            SELECT house_name,house_style,house_capacity,house_description,house_address,rental_type,current_rental_fee,current_reservation_fee,house_status
-            FROM house
-            WHERE house_name LIKE concat('%',?,'%')
-            order by house_name;
+ 
+            <sql:query var="cheap"> 
+                Select * from house order by current_rental_fee;
+             </sql:query>
+                
            
+                 
+
             
-            <sql:param>
-                ${param.name}
-            </sql:param>
-        </sql:query>
 
   <div class="wrapper">
 
@@ -46,13 +44,13 @@
         <div class="container" >
           <div class="row">
             <h1 class="text-center">Available Units</h1>
-            <c:forEach var="rows" items="${result.rows}">
+            <c:forEach var="rows" items="${cheap.rows}">
                 <div class="col-md-4 p-4 m-2">
                     <img class="img-fluid d-block rounded-circle mx-auto" src="${rows.image_path}" width="300" height="200"/>
                     <br/>
                     <p class="my-4">
                       <i>${rows.house_name}<br>
-                          ${rows.house_description}</i>
+                          ${rows.current_rental_fee}</i>
                     </p>
                     <p>
                       <b>${rows.house_address}</b>
