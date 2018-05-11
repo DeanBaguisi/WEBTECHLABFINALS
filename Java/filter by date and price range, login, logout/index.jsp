@@ -64,7 +64,7 @@
             <i class="glyphicon glyphicon-globe"></i> Notification </a>
         </li>
         <li>
-          <a href="index.html">
+          <a href="logoutprocess.jsp">
             <i class="glyphicon glyphicon-log-out"></i> Logout </a>
         </li>
       </ul>
