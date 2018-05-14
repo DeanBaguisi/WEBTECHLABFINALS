@@ -8,7 +8,22 @@
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/theme.css" type="text/css"> </head>
 
-<body>
+<?php
+  if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
+    if($_SESSION['user_type'] == "admin") {
+      header ('location: admin.php');
+    } else if($_SESSION['user_type'] == "user") {
+      header ('location: error.php');
+    } else {
+      header ('location: service.php');
+    }
+  }
+  
+  if(isset($_POST['submit'])) {
+    require './pages/include/signin.php';
+  }
+?>
+    <body>
   <div class="py-4">
     <div class="container">
       <div class="row">
